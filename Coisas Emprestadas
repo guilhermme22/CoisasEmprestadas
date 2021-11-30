@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134413777-1"></script>
+<script>
+		
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'UA-134413777-1');
+		  
+		</script>
+<link rel='icon' href='imagem/ico.png' type='image/x-icon' />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset='UTF-8'>
+<meta name='format-detection' content='telephone=no'>
+<meta http-equiv='Content-Type' content='text/html;'>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<link rel="stylesheet" href="css/estilo.css?v=2">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<script src="https://zeptojs.com/zepto.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js'></script>
+<script src="https://unpkg.com/ionicons@4.4.2/dist/ionicons.js"></script>
+<link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
+<script src="js/controle.js"></script>
+<script src="js/vegas.min.js"></script>
+<title>Login Ambiente Virtual de Aprendizagem</title>
+</head>
+<body class="tela_login" id="principalAnimacao" onload="ctrlErroLogin()">
+<div class="row">
+<div class="row faixalogin"></div>
+<section>
+<div class="col l12 s10 offset-s1">
+<div class="col s12 m12 l6 offset-l3" style="padding: 0px">
+<div class="col l12 m12 s12 black loginAVA">
+<h4 class="white-text thin center-align">Acesso ao <b> Ambiente Virtual de Aprendizagem</b></h4>
+</div>
+</div>
+<form class="col s12 m12 l6 offset-l3 form" method="post" action="login.php" id="frm_login">
+<div class="login">
+<div class="input-field col s12 m12 l12">
+<i class="icon ion-md-contact prefix white-text"></i>
+<input style="text-transform:lowcase;" id="user_id" name="username" type="text" autocomplete="off" size="18" maxlength="50" placeholder="usu&aacute;rio" onkeyup="javascript:verificaAcao(event, 1)" alt="usuario" title="usuario">
+</div>
+<div class="input-field col s12 m12 l12">
+<i class="icon ion-ios-lock prefix white-text"></i>
+<input id="password" name="userpass" type="password" autocomplete="off" size="18" maxlength="50" placeholder="senha" onkeyup="javascript:verificaAcao(event, 2)" alt="senha" title="senha">
+</div>
+<div class=" " style="width:100%;margin-bottom:20px;">
+<div class="white-text" style="margin-left:55px;font: 400 13.3333px Arial;"> Está com dificuldade para acessar? <a href="ajuda.php" target="_blank" class="white-text" style="font: 400 13.3333px Arial;">Clique aqui</a> </div>
+</div>
+</div>
+</form>
+</div>
+</section>
+<div id="descricaoCidade" class="descricaoCidade white-text thin"></div>
+<div class="col s10 offset-s1  l12 linhaBTN">
+
+<div class="col s12  offset-l6 l3 center buttonHelp waves-effect btnPUC" onclick="efetuarLogin()" alt="entrar" title="entrar"> entrar </div>
+</div>
+</div>
+<div class="comunicado" style="display:none">
+<span>
+<i class="fechar_help material-icons">close</i>
+<div style="min-height:200px">
+<div class="boxAjuda" style="display:none">
+Por padr&atilde;o, a senha de acesso ao Ambiente Virtual Blackboard &eacute; a mesma do&nbsp;<strong>Web Aluno / Web Professor.&nbsp;<br /></strong>Caso esteja com problemas com sua senha para acesso aos ambientes virtuais, entre em contato diretamente com o Service Desk da PUCPR, pelo telefone&nbsp;<strong>(41) 3271-2021</strong>, e informe a falha/dificuldade relativa a sua senha de acesso.&nbsp;&nbsp;Se ap&oacute;s contato com o Service Desk, ainda estiver com dificuldade de acesso, voc&ecirc; poder&aacute; ent&atilde;o entrar em contato com os seguintes canais de atendimento para verificar a sua situa&ccedil;&atilde;o acad&ecirc;mica:<br /><br /><em class="material-icons">check</em> estudantes da gradua&ccedil;&atilde;o presencial: <strong><a href="https://www.pucpr.br/atendimento-ao-aluno/" target="_blank" title="SIGA ONLINE">SIGA Online</a>;<br /></strong><em class="material-icons">check</em> estudantes da gradua&ccedil;&atilde;o Semipresencial:&nbsp;<strong>0800 550 0111;</strong><br /><em class="material-icons">check</em> estudantes da gradua&ccedil;&atilde;o EAD:&nbsp;<strong>0800 550 0111;</strong><br /><em class="material-icons">check</em> estudantes da p&oacute;s-gradua&ccedil;&atilde;o:&nbsp;<strong><a href="https://www.pucpr.br/atendimento-ao-aluno/" target="_blank" title="SIGA ONLINE">SIGA Online</a></strong><strong>;</strong><br /><em class="material-icons">check</em> professores: <strong>Diretoria da Central Marista de Servi&ccedil;os;</strong><br /><em class="material-icons">check</em> demais estudantes: secretaria do seu curso. <br /><br />Caso seu acesso &agrave;&nbsp;<strong>Web Aluno / Web Professor</strong>&nbsp;esteja normal, mas ainda n&atilde;o consiga acessar o Blackboard, envie um e-mail para <a href="mailto:suporte.ava@pucpr.br"><strong>suporte.ava@pucpr.br </strong></a>com seus dados completos (nome, c&oacute;digo de matr&iacute;cula, CPF e curso em que est&aacute; matriculado), a fim de que possamos verificar seu caso e lhe passar as orienta&ccedil;&otilde;es necess&aacute;rias para que tenha acesso ao sistema.<br /><br /><br />
+</div>
+<div class="boxManutencao" style="display:none">
+</div>
+<div class="boxSenha" style="display:none;height:600px">
+
+</div>
+<div class="boxLogin" style="display:none;height:550px">
+
+</div>
+<div class="senhaErrada" style="display:none"> <p>usuário ou senha incorreta</p> </div>
+</div>
+</span>
+</div>
+<div class="help-geralADM"><i class="icon ion-ios-help-circle-outline"></i></div>
+<input type="hidden" name="ctrlErroLogin" id="ctrlErroLogin" value="0">
+<input type="hidden" name="ctrlManutencao" id="ctrlManutencao" value="0">
+<div class="" style="width:100%;text-align:right;padding:5px;bottom:0;position:absolute;">
+<div class="white-text" style="padding-right:2%;padding-bottom:10px">
+<a href="https://privacidade.grupomarista.org.br/Privacidade/" target="_blank" class="linkPrivacidade white-text" style="text-decoration:underline;font:12px Arial;font-weight:lighter !important;">Privacidade e Proteção de Dados</a>
+</div>
+</div>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v64f9daad31f64f81be21cbef6184a5e31634941392597" integrity="sha512-gV/bogrUTVP2N3IzTDKzgP0Js1gg4fbwtYB6ftgLbKQu/V8yH2+lrKCfKHelh4SO3DPzKj4/glTO+tNJGDnb0A==" data-cf-beacon='{"rayId":"6b6149f6ffd9f627","token":"fc4f3577d826499fb703b45ca4bbf011","version":"2021.11.0","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>
